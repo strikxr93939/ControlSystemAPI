@@ -1,0 +1,15 @@
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Infrastructure\bin\Debug\net10.0\VersionControl.Infrastructure.deps.json
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Infrastructure\bin\Debug\net10.0\VersionControl.Infrastructure.dll
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Infrastructure\bin\Debug\net10.0\VersionControl.Infrastructure.pdb
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Infrastructure\bin\Debug\net10.0\VersionControl.Domain.dll
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Infrastructure\bin\Debug\net10.0\VersionControl.Domain.pdb
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Infrastructure\obj\Debug\net10.0\VersionControl.Infrastructure.csproj.AssemblyReference.cache
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Infrastructure\obj\Debug\net10.0\VersionControl.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Infrastructure\obj\Debug\net10.0\VersionControl.Infrastructure.AssemblyInfoInputs.cache
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Infrastructure\obj\Debug\net10.0\VersionControl.Infrastructure.AssemblyInfo.cs
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Infrastructure\obj\Debug\net10.0\VersionControl.Infrastructure.csproj.CoreCompileInputs.cache
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Infrastructure\obj\Debug\net10.0\VersionC.D46B37CB.Up2Date
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Infrastructure\obj\Debug\net10.0\VersionControl.Infrastructure.dll
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Infrastructure\obj\Debug\net10.0\refint\VersionControl.Infrastructure.dll
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Infrastructure\obj\Debug\net10.0\VersionControl.Infrastructure.pdb
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Infrastructure\obj\Debug\net10.0\ref\VersionControl.Infrastructure.dll

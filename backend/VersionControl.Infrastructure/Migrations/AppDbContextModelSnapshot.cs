@@ -1,0 +1,134 @@
+using System;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using VersionControl.Infrastructure.Persistence;
+
+#nullable disable
+
+namespace VersionControl.Infrastructure.Migrations
+{
+    [DbContext(typeof(AppDbContext))]
+    partial class AppDbContextModelSnapshot : ModelSnapshot
+    {
+        protected override void BuildModel(ModelBuilder modelBuilder)
+        {
+#pragma warning disable 612, 618
+            modelBuilder.HasAnnotation("ProductVersion", "10.0.8");
+
+            modelBuilder.Entity("VersionControl.Domain.Entities.Computer", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+                    b.Property<string>("IpAddress").IsRequired().HasColumnType("TEXT");
+                    b.Property<bool>("IsOnline").HasColumnType("INTEGER");
+                    b.Property<DateTime>("LastSeen").HasColumnType("TEXT");
+                    b.Property<string>("LastUser").IsRequired().HasColumnType("TEXT");
+                    b.Property<string>("Name").IsRequired().HasColumnType("TEXT");
+                    b.Property<string>("OSVersion").IsRequired().HasColumnType("TEXT");
+                    b.Property<string>("Workshop").IsRequired().HasColumnType("TEXT");
+                    b.HasKey("Id");
+                    b.HasIndex("Name").IsUnique();
+                    b.ToTable("Computers");
+                });
+
+            modelBuilder.Entity("VersionControl.Domain.Entities.InstalledVersion", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+                    b.Property<Guid>("ComputerId").HasColumnType("TEXT");
+                    b.Property<DateTime>("InstalledAt").HasColumnType("TEXT");
+                    b.Property<Guid>("ProgramId").HasColumnType("TEXT");
+                    b.Property<string>("Status").IsRequired().HasColumnType("TEXT");
+                    b.Property<string>("Version").IsRequired().HasColumnType("TEXT");
+                    b.HasKey("Id");
+                    b.HasIndex("ComputerId");
+                    b.HasIndex("ProgramId");
+                    b.ToTable("Versions");
+                });
+
+            modelBuilder.Entity("VersionControl.Domain.Entities.Policy", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+                    b.Property<int>("BlockType").HasColumnType("INTEGER");
+                    b.Property<DateTime?>("EndTime").HasColumnType("TEXT");
+                    b.Property<string>("Exceptions").IsRequired().HasColumnType("TEXT");
+                    b.Property<bool>("IsActive").HasColumnType("INTEGER");
+                    b.Property<string>("MaxVersion").HasColumnType("TEXT");
+                    b.Property<string>("Message").IsRequired().HasColumnType("TEXT");
+                    b.Property<string>("MinVersion").HasColumnType("TEXT");
+                    b.Property<string>("ProgramPattern").IsRequired().HasColumnType("TEXT");
+                    b.Property<DateTime>("StartTime").HasColumnType("TEXT");
+                    b.Property<string>("Workshop").IsRequired().HasColumnType("TEXT");
+                    b.HasKey("Id");
+                    b.ToTable("Policies");
+                });
+
+            modelBuilder.Entity("VersionControl.Domain.Entities.ProgramEntity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+                    b.Property<string>("CurrentVersion").IsRequired().HasColumnType("TEXT");
+                    b.Property<string>("Name").IsRequired().HasColumnType("TEXT");
+                    b.Property<string>("Path").IsRequired().HasColumnType("TEXT");
+                    b.Property<double>("SizeMb").HasColumnType("REAL");
+                    b.Property<string>("Type").IsRequired().HasColumnType("TEXT");
+                    b.Property<string>("Workshop").IsRequired().HasColumnType("TEXT");
+                    b.HasKey("Id");
+                    b.HasIndex("Name");
+                    b.ToTable("Programs");
+                });
+
+            modelBuilder.Entity("VersionControl.Domain.Entities.Violation", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+                    b.Property<int>("BlockType").HasColumnType("INTEGER");
+                    b.Property<string>("ComputerName").IsRequired().HasColumnType("TEXT");
+                    b.Property<string>("Message").IsRequired().HasColumnType("TEXT");
+                    b.Property<string>("PolicyId").IsRequired().HasColumnType("TEXT");
+                    b.Property<string>("ProgramName").IsRequired().HasColumnType("TEXT");
+                    b.Property<string>("RequiredVersion").IsRequired().HasColumnType("TEXT");
+                    b.Property<DateTime>("Timestamp").HasColumnType("TEXT");
+                    b.Property<string>("UserAction").IsRequired().HasColumnType("TEXT");
+                    b.Property<string>("UserName").IsRequired().HasColumnType("TEXT");
+                    b.Property<string>("Version").IsRequired().HasColumnType("TEXT");
+                    b.HasKey("Id");
+                    b.HasIndex("Timestamp");
+                    b.ToTable("Violations");
+                });
+
+            // ── FK / Navigation ────────────────────────────────────────
+            modelBuilder.Entity("VersionControl.Domain.Entities.InstalledVersion", b =>
+                {
+                    b.HasOne("VersionControl.Domain.Entities.Computer", "Computer")
+                        .WithMany("Versions")
+                        .HasForeignKey("ComputerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("VersionControl.Domain.Entities.ProgramEntity", "Program")
+                        .WithMany()
+                        .HasForeignKey("ProgramId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Computer");
+                    b.Navigation("Program");
+                });
+
+            modelBuilder.Entity("VersionControl.Domain.Entities.Computer", b =>
+                {
+                    b.Navigation("Versions");
+                });
+
+#pragma warning restore 612, 618
+        }
+    }
+}

@@ -1,0 +1,11 @@
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Domain\bin\Debug\net10.0\VersionControl.Domain.deps.json
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Domain\bin\Debug\net10.0\VersionControl.Domain.dll
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Domain\bin\Debug\net10.0\VersionControl.Domain.pdb
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Domain\obj\Debug\net10.0\VersionControl.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Domain\obj\Debug\net10.0\VersionControl.Domain.AssemblyInfoInputs.cache
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Domain\obj\Debug\net10.0\VersionControl.Domain.AssemblyInfo.cs
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Domain\obj\Debug\net10.0\VersionControl.Domain.csproj.CoreCompileInputs.cache
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Domain\obj\Debug\net10.0\VersionControl.Domain.dll
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Domain\obj\Debug\net10.0\refint\VersionControl.Domain.dll
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Domain\obj\Debug\net10.0\VersionControl.Domain.pdb
+C:\techsoft\repos\VersionControlSystem\backend\VersionControl.Domain\obj\Debug\net10.0\ref\VersionControl.Domain.dll
